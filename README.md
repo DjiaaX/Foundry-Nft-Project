@@ -1,35 +1,133 @@
-Happy SVG:
-data:image/svg+xml;base64,
-PHN2ZyB2aWV3Qm94PSIwIDAgMjAwIDIwMCIgd2lkdGg9IjQwMCIgIGhlaWdodD0iNDAwIiB4bWxu
-cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KICA8Y2lyY2xlIGN4PSIxMDAiIGN5PSIx
-MDAiIGZpbGw9InllbGxvdyIgcj0iNzgiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyIv
-Pg0KICA8ZyBjbGFzcz0iZXllcyI+DQogICAgPGNpcmNsZSBjeD0iNzAiIGN5PSI4MiIgcj0iMTIi
-Lz4NCiAgICA8Y2lyY2xlIGN4PSIxMjciIGN5PSI4MiIgcj0iMTIiLz4NCiAgPC9nPg0KICA8cGF0
-aCBkPSJtMTM2LjgxIDExNi41M2MuNjkgMjYuMTctNjQuMTEgNDItODEuNTItLjczIiBzdHlsZT0i
-ZmlsbDpub25lOyBzdHJva2U6IGJsYWNrOyBzdHJva2Utd2lkdGg6IDM7Ii8+DQo8L3N2Zz4=
+# Foundry NFT Project
 
-Sad SVG:
-data:image/svg+xml;base64,
-PHN2ZyB3aWR0aD0iMTAyNHB4IiBoZWlnaHQ9IjEwMjRweCIgdmlld0JveD0iMCAwIDEwMjQgMTAy
-NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBhdGggZmlsbD0iIzMz
-MyIgZD0iTTUxMiA2NEMyNjQuNiA2NCA2NCAyNjQuNiA2NCA1MTJzMjAwLjYgNDQ4IDQ0OCA0NDgg
-NDQ4LTIwMC42IDQ0OC00NDhTNzU5LjQgNjQgNTEyIDY0em0wIDgyMGMtMjA1LjQgMC0zNzItMTY2
-LjYtMzcyLTM3MnMxNjYuNi0zNzIgMzcyLTM3MiAzNzIgMTY2LjYgMzcyIDM3Mi0xNjYuNiAzNzIt
-MzcyIDM3MnoiLz4NCiAgPHBhdGggZmlsbD0iI0U2RTZFNiIgZD0iTTUxMiAxNDBjLTIwNS40IDAt
-MzcyIDE2Ni42LTM3MiAzNzJzMTY2LjYgMzcyIDM3MiAzNzIgMzcyLTE2Ni42IDM3Mi0zNzItMTY2
-LjYtMzcyLTM3Mi0zNzJ6TTI4OCA0MjFhNDguMDEgNDguMDEgMCAwIDEgOTYgMCA0OC4wMSA0OC4w
-MSAwIDAgMS05NiAwem0zNzYgMjcyaC00OC4xYy00LjIgMC03LjgtMy4yLTguMS03LjRDNjA0IDYz
-Ni4xIDU2Mi41IDU5NyA1MTIgNTk3cy05Mi4xIDM5LjEtOTUuOCA4OC42Yy0uMyA0LjItMy45IDcu
-NC04LjEgNy40SDM2MGE4IDggMCAwIDEtOC04LjRjNC40LTg0LjMgNzQuNS0xNTEuNiAxNjAtMTUx
-LjZzMTU1LjYgNjcuMyAxNjAgMTUxLjZhOCA4IDAgMCAxLTggOC40em0yNC0yMjRhNDguMDEgNDgu
-MDEgMCAwIDEgMC05NiA0OC4wMSA0OC4wMSAwIDAgMSAwIDk2eiIvPg0KICA8cGF0aCBmaWxsPSIj
-MzMzIiBkPSJNMjg4IDQyMWE0OCA0OCAwIDEgMCA5NiAwIDQ4IDQ4IDAgMSAwLTk2IDB6bTIyNCAx
-MTJjLTg1LjUgMC0xNTUuNiA2Ny4zLTE2MCAxNTEuNmE4IDggMCAwIDAgOCA4LjRoNDguMWM0LjIg
-MCA3LjgtMy4yIDguMS03LjQgMy43LTQ5LjUgNDUuMy04OC42IDk1LjgtODguNnM5MiAzOS4xIDk1
-LjggODguNmMuMyA0LjIgMy45IDcuNCA4LjEgNy40SDY2NGE4IDggMCAwIDAgOC04LjRDNjY3LjYg
-NjAwLjMgNTk3LjUgNTMzIDUxMiA1MzN6bTEyOC0xMTJhNDggNDggMCAxIDAgOTYgMCA0OCA0OCAw
-IDEgMC05NiAweiIvPg0KPC9zdmc+
+Minimal README for a Solidity NFT project using Foundry (forge, cast, anvil).
 
-Example SVG:
-data:image/svg+xml;base64,
-PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48dGV4dCB4PSIwIiB5PSIxNSIgZmlsbD0iZ3JheSI+SGkhIFlvdXIgQnJvd3NlciBEZWNvZGVkIFRoaXMuLjwvdGV4dD48L3N2Zz4=
+## Table of contents
+- What this is
+- Requirements
+- Quick start
+- Common commands
+- Testing & debugging
+- Deploying
+- Verifying on Etherscan
+- Contracts (overview)
+- Security
+- Contributing & license
+
+## What this is
+A small NFT project built with Solidity and Foundry. Contains:
+- ERC-721 NFT contract(s)
+- deployment scripts (forge script)
+- unit tests (forge test)
+- optional mocks for local development
+
+## Requirements
+- Foundry (forge, cast, anvil). Install with:
+```bash
+curl -L https://foundry.paradigm.xyz | bash
+foundryup
+```
+- Node.js (optional, for frontends/scripts)
+- A JSON-RPC provider URL (Infura/Alchemy) and Etherscan API key for verification
+- PRIVATE_KEY for deployment (use a throwaway/test key; never commit)
+
+## Quick start
+1. Clone and open:
+```bash
+git clone <repo-url>
+cd Foundry-NFT-Project
+```
+2. Install/update Foundry:
+```bash
+foundryup
+```
+3. Build:
+```bash
+forge build
+```
+
+## Common commands
+- Run tests:
+```bash
+forge test
+```
+- Verbose test output:
+```bash
+forge test -vv
+```
+- Run a single contract/test:
+```bash
+forge test --match-contract MyContractTest
+```
+- Start a local chain (Anvil):
+```bash
+anvil
+# or run in background: anvil > /dev/null 2>&1 &
+```
+- Run a deploy script locally (broadcast to Anvil):
+```bash
+forge script script/Deploy.s.sol:DeployScript --rpc-url http://127.0.0.1:8545 --private-key <PRIVATE_KEY> --broadcast
+```
+
+## Environment variables
+Create a .env (do NOT commit) or export variables:
+- PRIVATE_KEY — deployer's private key
+- RPC_URL (or named per network) — JSON‑RPC endpoint
+- ETHERSCAN_API_KEY — for contract verification
+
+Example (bash):
+```bash
+export PRIVATE_KEY="0x..."
+export RPC_URL="https://eth-goerli.alchemyapi.io/v2/..."
+export ETHERSCAN_API_KEY="..."
+```
+
+## Deploying to a testnet / mainnet
+Use a forge script and broadcast:
+```bash
+forge script script/Deploy.s.sol:DeployScript --rpc-url $RPC_URL --private-key $PRIVATE_KEY --broadcast
+```
+You can add `--verify` or run etherscan verification after deployment (see below).
+
+## Verifying on Etherscan
+After deployment, verify using:
+```bash
+forge verify-contract --chain-id <CHAIN_ID> <CONTRACT_ADDRESS> src/YourContract.sol:YourContract $ETHERSCAN_API_KEY
+```
+Or use `forge create --verify` flags depending on project setup.
+
+## Testing tips
+- Use cheatcodes in tests (vm) for forking and state manipulation.
+- Fuzz inputs with `forge test --fuzz-limit`.
+- Use Foundry snapshots and gas reports:
+```bash
+forge test --gas-report
+```
+
+## Contracts (typical layout)
+- src/
+    - NFT.sol — ERC-721 implementation (minting, metadata)
+    - NFTMarketplace.sol — optional listing/auction logic
+    - MockERC20.sol — test token for marketplace flows
+- script/
+    - Deploy.s.sol — deployment script(s)
+- test/
+    - NFT.t.sol — unit tests
+    - Marketplace.t.sol — integration tests
+
+Replace filenames/names with your actual contracts.
+
+## Security
+- Follow best practices: access control, reentrancy guards, safe math where needed.
+- Run static analysis and slither where possible.
+- Review minting/payment logic and metadata sources.
+
+## Contributing
+- Open issues for bugs/feature requests.
+- Send PRs with clear descriptions and tests.
+- Keep changes small and focused.
+
+## License
+MIT — see LICENSE file.
+
+(generate by AI XD)
