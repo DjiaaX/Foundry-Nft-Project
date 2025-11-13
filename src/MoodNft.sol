@@ -13,17 +13,14 @@ contract MoodNft is ERC721 {
     string private s_sadSvgImageUri;
     string private s_happySvgImageUri;
 
-    enum Mood{
+    enum Mood {
         HAPPY,
         SAD
     }
 
-    mapping (uint256 => Mood) private s_tokenIdToMood;
+    mapping(uint256 => Mood) private s_tokenIdToMood;
 
-    constructor(
-        string memory sadSvg,
-        string memory happySvg
-    ) ERC721("MoodNft", "MN") {
+    constructor(string memory sadSvg, string memory happySvg) ERC721("MoodNft", "MN") {
         s_tokenCounter = 0;
         s_sadSvgImageUri = sadSvg;
         s_happySvgImageUri = happySvg;
@@ -52,34 +49,31 @@ contract MoodNft is ERC721 {
         return "data:application/json;base64,";
     }
 
-    function tokenURI(
-            uint256 tokenId
-        ) public view override returns(string memory) {
-            string memory imageURI;
-            if (s_tokenIdToMood[tokenId] == Mood.HAPPY) {
-                imageURI = s_happySvgImageUri;
-            } else {
-                imageURI = s_sadSvgImageUri;
-            }
+    function tokenURI(uint256 tokenId) public view override returns (string memory) {
+        string memory imageURI;
+        if (s_tokenIdToMood[tokenId] == Mood.HAPPY) {
+            imageURI = s_happySvgImageUri;
+        } else {
+            imageURI = s_sadSvgImageUri;
+        }
 
-            return
-                string(
-                    abi.encodePacked(
-                        _baseURI(),
-                        Base64.encode(
-                            bytes(
-                                // string memory tokenMetaData = string.concat
-                                abi.encodePacked(
-                                    '{"name": "',
-                                    name(),
-                                    '", "description", "An NFT that reflects the owners mood.", "attributes": [{"trait_type": "moodines", "value": 100}], "image": "',
-                                    imageURI,
-                                    '"}'
-                                )
-                            )
+        return string(
+            abi.encodePacked(
+                _baseURI(),
+                Base64.encode(
+                    bytes(
+                        // string memory tokenMetaData = string.concat
+                        abi.encodePacked(
+                            '{"name": "',
+                            name(),
+                            '", "description", "An NFT that reflects the owners mood.", "attributes": [{"trait_type": "moodines", "value": 100}], "image": "',
+                            imageURI,
+                            '"}'
                         )
                     )
-                );
-            // {"name": "Mood NFT"}
-        }
+                )
+            )
+        );
+        // {"name": "Mood NFT"}
+    }
 }

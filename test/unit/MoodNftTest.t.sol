@@ -14,7 +14,7 @@ contract MoodNftTest is Test {
 
     address USER = makeAddr("user");
 
-    function setUp()  public {
+    function setUp() public {
         moodNft = new MoodNft(SAD_SVG_URI, HAPPY_SVG_URI);
     }
 

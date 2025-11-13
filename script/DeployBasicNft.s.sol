@@ -7,7 +7,7 @@ import {BasicNFT} from "../src/BasicNFT.sol";
 contract DeployBasicNft is Script {
     function run() external returns (BasicNFT) {
         vm.startBroadcast();
-        BasicNFT basicNFT =  new BasicNFT();
+        BasicNFT basicNFT = new BasicNFT();
         vm.stopBroadcast();
         return basicNFT;
     }
