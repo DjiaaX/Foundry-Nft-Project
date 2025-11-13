@@ -1,0 +1,37 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.19;
+
+import {Test} from "forge-std/Test.sol";
+import {DeployBasicNft} from "../../script/DeployBasicNFT.s.sol";
+import {BasicNFT} from "../../src/BasicNFT.sol";
+
+contract BasicNFTTest is Test {
+    DeployBasicNft public deployer;
+    BasicNFT public basicNft;
+    address public USER = makeAddr("user");
+    string public constant PUG = "ipfs://bafybeig37ioir76s7mg5oobetncojcm3c3hxasyd4rvid4jqhy4gkaheg4/?filename=0-PUG.json";
+
+    function setUp() external {
+        deployer = new DeployBasicNft();
+        basicNft = deployer.run();
+    }
+
+    function testNameIsCorrect() external {
+        string memory expectedName = "Dogie";
+        string memory actualName = basicNft.name();
+        // array of bytes
+        // uint256, bool, address, bytes32
+        assert(
+            keccak256(abi.encodePacked (expectedName)) ==
+                keccak256(abi.encodePacked (actualName))
+        );
+    }
+
+    function testCanMintAndHaveBalance() public {
+        vm.prank(USER);
+        basicNft.mintNft(PUG);
+
+        assert(basicNft.balanceOf(USER) == 1);
+        assert(keccak256(abi.encodePacked(PUG)) == keccak256(abi.encodePacked(basicNft.tokenURI(0))));
+    }
+}
